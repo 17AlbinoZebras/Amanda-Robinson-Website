@@ -99,13 +99,27 @@ function OverviewSection() {
                             eye to center the face well within the circular
                             mask. sizes tells Next.js how big this actually
                             renders on screen, so it can serve a properly
-                            downscaled image instead of the full source. */}
+                            downscaled image instead of the full source.
+                            210px/18.75vw (not .headshotContainer's own raw
+                            140px/12.5vw) — .headshot's own transform:
+                            scale(1.5) below enlarges the rendered image by
+                            1.5x for its crop/positioning, so the container's
+                            raw size understates how much actual resolution
+                            is needed; requesting for the container alone
+                            visibly softened once upscaled 1.5x. 1.5x'd here
+                            (140→210, 12.5→18.75) keeps it sharp through that
+                            scale-up — same fix as about.tsx's own headshot,
+                            which has the identical scale-then-crop setup.
+                            quality raised from next/image's own default (75)
+                            for the same reason, allowlisted in
+                            next.config.ts. */}
                         <Image
                             src="/headshot.jpg"
                             alt="Amanda Robinson smiling against a dark background"
                             width={2401}
                             height={3600}
-                            sizes="(max-width: 700px) 140px, 12.5vw"
+                            sizes="(max-width: 700px) 210px, 18.75vw"
+                            quality={90}
                             className={styles.headshot}
                         />
                     </div>

@@ -202,7 +202,7 @@
 }
 
 .description {
-    min-height: fit-content;
+    height: fit-content;
     width: 92.5%;
     border-radius: 20px;
     padding: 12px;
@@ -232,6 +232,10 @@
        reset that automatic minimum to 0. Same fix already used on .project
        for the same reason. */
     overflow: hidden;
+}
+
+.previewExpanded .description {
+    height: 0 !important;
 }
 
 .description p {
