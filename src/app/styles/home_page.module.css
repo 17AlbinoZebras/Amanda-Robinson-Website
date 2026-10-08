@@ -261,7 +261,8 @@
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    --delay-animation: 2s
+    --delay-animation: 1.25s;
+    z-index: 1;
 }
 
 /* ORB ANIMATIONS
