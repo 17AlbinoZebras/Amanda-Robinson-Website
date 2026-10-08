@@ -129,13 +129,13 @@ function OverviewSection() {
                         <h2 className={styles.sectionTitle}>Technology Stacks</h2>
                         <div className={styles.bodyText}>
                             <b>Languages: </b>
-                            <p>Java, Python, TypeScript, HTML/CSS, SQL, C++, C</p>
+                            <p>Java, Python, SQL, TypeScript, HTML/CSS, C++, C</p>
                             <b>Frameworks/Libraries: </b>
-                            <p>React, Bootstrap, Next.js, Node.js/Express, PySide6</p>
+                            <p>React.js, Next.js, Node.js/Express, PyTorch, PySide6</p>
                             <b>Tools: </b>
                             <p>Git, VS Code, Claude Code, Warp, Linux</p>
                             <b>Other: </b>
-                            <p>MySQL, PostgreSQL, SQL Server, AWS, Figma</p>
+                            <p>Machine Learning, NLP, AWS, Figma</p>
                         </div>
                     </div>
                     <div className={styles.education}>
